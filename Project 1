@@ -1,0 +1,76 @@
+package project1;
+import java.util.Scanner;
+public class Cofee_shop {
+
+	public static void main(String[] args) {
+	Scanner	sc=new Scanner(System.in);
+	int black_cofee=220,cold_cofee=275,espresso=215,white_moocha=315,black_mocha=315,caramel_cofee=355,caffe_latte=280,total=0,quantity=0;
+	System.out.println("WELCOME__ TO __STAR__BUCKS");
+	System.out.println("__________________________");
+	do
+	{
+		System.out.println("1 black_cofee \n2 cold_cofee \n3 espresso \n4 white_mocha \n5 black_mocha \n6 caramel_cofee \n7 caffe_latte");
+		System.out.println("Enter 1 to 7 to choose your cofee");
+		int num=sc.nextInt();
+		switch(num)
+		{
+		case 1:
+			System.out.println("you choosed >>> black_cofee");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*black_cofee);
+			break;
+		case 2:
+			System.out.println("you choosed >>> cold_cofee");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*cold_cofee);
+			break;
+		case 3:
+			System.out.println("you choosed >>> espresso");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*espresso);
+			break;
+		case 4:
+			System.out.println("you choosed >>> white_moocha");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*white_moocha);
+			break;
+		case 5:
+			System.out.println("you choosed >>> black_mocha");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*black_mocha);
+			break;
+		case 6:
+			System.out.println("you choosed >>> caramel_cofee");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*caramel_cofee);
+			break;
+		case 7:
+			System.out.println("you choosed >>> caffe_latte");
+			System.out.println("enter quantity");
+			quantity=sc.nextInt();
+			total=total+(quantity*caffe_latte);
+			break;
+			default:
+				System.out.println("invalid");
+		}
+		System.out.println("do you want to ---continue");
+		char dec=sc.next().charAt(0);
+		if (dec=='n')
+		{
+			System.out.println("Your total bill is"+" "+total);
+			System.out.println("______________________________");
+			System.out.println("Thankyou___visit again <.'.>");
+			break;
+		}
+		
+	}while(true);
+	
+	}
+
+}
